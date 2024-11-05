@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Exam Questions</title>
+    
+    <!-- Bootstrap CSS for easy styling -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            opacity: 0; /* Initially hidden */
+            transition: opacity 0.5s ease 0.3s; /* Fades in after overlay */
+        }
+
+        /* Title Styling */
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.8em;
+            background: linear-gradient(135deg, #6a82fb, #fc5c7d);
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        /* Accordion Button Styling */
+        .accordion {
+            background: #6a82fb;
+            color: white;
+            cursor: pointer;
+            padding: 18px 24px;
+            border: none;
+            outline: none;
+            width: 100%;
+            text-align: left;
+            font-size: 1.1em;
+            transition: background 0.3s ease, transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* Accordion Hover Effect */
+        .accordion:hover {
+            background: #5c6bc0;
+        }
+
+        /* Accordion Active State */
+        .accordion.active {
+            background: #34495e;
+        }
+
+        /* Icon Styling */
+        .accordion .icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion.active .icon {
+            transform: rotate(45deg);
+        }
+
+        /* Panel for Collapsible Content */
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+            background: #f9f9f9;
+        }
+
+        .panel ul {
+            list-style: none;
+            padding: 15px 25px;
+        }
+
+        .panel ul li {
+            padding: 8px 0;
+            font-size: 1em;
+            color: #555;
+            border-bottom: 1px solid #eee;
+        }
+
+        .panel ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Centered Notification Overlay */
+        .notification-overlay {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #34495e;
+            color: white;
+            padding: 20px 30px;
+            font-size: 1.2em;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        .notification-overlay.hidden {
+            opacity: 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.6em;
+                padding: 15px;
+            }
+
+            .accordion {
+                font-size: 1em;
+                padding: 16px;
+            }
+
+            .panel ul li {
+                font-size: 0.95em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Centered Notification Overlay -->
+    <div class="notification-overlay" id="notificationOverlay">
+        Click on the plus icon to open the questions.
+    </div>
+
+    <div class="container">
+        <h1>AI Exam Imp Questions</h1>
+
+        <!-- Unit 3 Section -->
+        <button class="accordion">
+            Unit 3: Knowledge Representation and Reasoning
+            <span class="icon">+</span>
+        </button>
+        <div class="panel">
+            <ul>
+                <li>Explain Different Types of Knowledge in Detail.</li>
+                <li>Discuss Different Knowledge Representation Techniques in Detail.</li>
+                <li>State and Explain the Basic Components in Predicate Logic.</li>
+                <li>Explain Different Components of Semantic Networks.</li>
+                <li>Discuss the Four Ways of Knowledge Representation in Detail.</li>
+                <li>Strengths and Weaknesses of Decision Trees in Machine Learning.</li>
+            </ul>
+        </div>
+
+        <!-- Unit 4 Section -->
+        <button class="accordion">
+            Unit 4: First-Order Logic and Inference
+            <span class="icon">+</span>
+        </button>
+        <div class="panel">
+            <ul>
+                <li>Strengths and Limitations of Using Predicate Logic in Knowledge Representation.</li>
+                <li>Limitations of Constraint Propagation in Complex AI Problems.</li>
+                <li>Constraint Propagation vs. Backtracking in AI Search Algorithms.</li>
+                <li>Resolution Process in First-Order Logic (with Example).</li>
+                <li>Completeness and Soundness in Propositional and First-Order Logic.</li>
+                <li>Limitations of Propositional Logic and How FOL Addresses Them.</li>
+            </ul>
+        </div>
+
+        <!-- Unit 5 Section -->
+        <button class="accordion">
+            Unit 5: Expert Systems and Applications
+            <span class="icon">+</span>
+        </button>
+        <div class="panel">
+            <ul>
+                <li>Explain Dempster-Shafer Theory in Detail and Compare with Bayesian Reasoning.</li>
+                <li>Contribution of Expert Systems in Engineering (Example: XCON).</li>
+                <li>Advantages and Limitations of Heuristics in Expert Systems.</li>
+                <li>Comparison of MYCIN, DART, and XCON.</li>
+                <li>Improving Medical Diagnosis and Treatment with Expert Systems (Example: MYCIN).</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- JavaScript for Accordion and Notification -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const notificationOverlay = document.getElementById("notificationOverlay");
+            const container = document.querySelector(".container");
+            const accordions = document.querySelectorAll(".accordion");
+
+            // Fade out notification overlay after 3 seconds
+            setTimeout(() => {
+                notificationOverlay.classList.add("hidden");
+                container.style.opacity = 1; // Fade in main content
+            }, 3000); // Display the notification for 3 seconds
+
+            // Accordion toggle functionality
+            accordions.forEach(accordion => {
+                accordion.addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    const panel = this.nextElementSibling;
+
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    } else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+
+                    // Close other panels when one opens
+                    accordions.forEach(acc => {
+                        if (acc !== this) {
+                            acc.classList.remove("active");
+                            acc.nextElementSibling.style.maxHeight = null;
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
